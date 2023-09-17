@@ -1,0 +1,373 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>workhouse</title>
+  <link href="{%static 'css/home.css'%}" rel="stylesheet" type="text/css">
+  <link href="{%static 'css/style(3).css'%}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="{%static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{%static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" type="text/css">
+    <style>
+        .plan {
+        border-radius: 16px;
+        box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
+        padding: 10px;
+        background-color: #fff;
+        color: #697e91;
+        max-width: 300px;
+        }
+
+        .plan strong {
+        font-weight: 600;
+        color: #425275;
+        }
+
+        .plan .inner {
+        align-items: center;
+        padding: 20px;
+        padding-top: 40px;
+        background-color: #ecf0ff;
+        border-radius: 12px;
+        position: relative;
+        }
+
+        .plan .pricing {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #bed6fb;
+        border-radius: 99em 0 0 99em;
+        display: flex;
+        align-items: center;
+        padding: 0.625em 0.75em;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #425475;
+        }
+
+        .plan .pricing small {
+        color: #707a91;
+        font-size: 0.75em;
+        margin-left: 0.25em;
+        }
+
+        .plan .title {
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: #425675;
+        }
+
+        .plan .title + * {
+        margin-top: 0.75rem;
+        }
+
+        .plan .info + * {
+        margin-top: 1rem;
+        }
+
+        .plan .features {
+        display: flex;
+        flex-direction: column;
+        }
+
+        .plan .features li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        }
+
+        .plan .features li + * {
+        margin-top: 0.75rem;
+        }
+
+        .plan .features .icon {
+        background-color: #1FCAC5;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        }
+
+        .plan .features .icon svg {
+        width: 14px;
+        height: 14px;
+        }
+
+        .plan .features + * {
+        margin-top: 1.25rem;
+        }
+
+        .plan .action {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        }
+
+        .plan .button {
+        background-color: #FF3E41;
+        border-radius: 6px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.125rem;
+        text-align: center;
+        border: 0;
+        outline: 0;
+        width: 100%;
+        padding: 0.625em 0.75em;
+        text-decoration: none;
+        }
+
+        .plan .button:hover, .plan .button:focus {
+        background-color: #FF3E41;
+        }
+
+        .post_img{
+          border-radius: 6px;
+          padding-top: 10px;
+        }
+    </style>  
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{%static 'lib/wow/wow.min.js'%}"></script>
+  <script src="{%static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{%static 'lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{%static 'lib/counterup/counterup.min.js'%}"></script>
+  <script src="{%static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Template Javascript -->
+  <script src="{% static 'js/main.js' %}"></script>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
+        <div class="header__left">
+            <a href="index.html" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5">
+                <h2 class="mb-2 text-white">workhouse</h2>
+            </a>
+            
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <div class="header__right">
+                    <div class="header__info">
+                      <img
+                        class="user__avatar"
+                        src="/media/{{ worker.user_image}}"
+                        alt=""
+                      />
+                      <h4>{{worker.username}}</h4>
+                    </div>
+                    <span class="material-icons"> </span>
+                    
+                    <div class="nav-item dropdown">
+                    <span href="#" class="material-icons" data-bs-toggle="dropdown" style="pointer-events: none;"> expand_more </span>
+                        <div class="dropdown-menu fade-up m-0  ">
+                        <a href="/worker_valid" class="dropdown-item">Settings</a>
+                        <a href="userreg.html" class="dropdown-item">Feedback</a>
+                        <a href="/logout_view" class="dropdown-item">Logout</a>
+                    </div>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+
+    <!-- main body starts -->
+    <div class="main__body ">
+        <!-- sidebar starts -->
+        <div class="sidebar">
+          <div class="sidebarRow">
+            <img
+              class="user__avatar"
+              src="/media/{{worker.user_image}}"
+              alt=""
+            />
+            <h4>{{worker.first_name}} {{worker.last_name}}</h4>
+          </div>
+  
+          
+  
+          <div class="sidebarRow">
+            <span class="material-icons"> emoji_flags </span>
+            <h4>Organisation</h4>
+          </div>
+  
+          <div class="sidebarRow">
+            <span class="material-icons"> people </span>
+            <h4>Workers</h4>
+          </div>
+  
+          <div class="sidebarRow">
+            <span class="material-icons"> chat </span>
+            <h4>message</h4>
+          </div>
+  
+          <div class="sidebarRow">
+            <span class="material-icons"> history </span>
+            <h4>History</h4>
+          </div>
+  
+          
+  
+          <div class="sidebarRow">
+            <span class="material-icons"> expand_more </span>
+            <h4>More</h4>
+          </div>
+        </div>
+        <!-- sidebar ends -->
+    <!-- card -->  
+    
+    <div class="plan">
+		<div class="inner">
+			<span class="pricing">
+				<span>
+				{{post.max_wage}} ₹	 <small>/ {{post.expected_time}} Hr</small>
+				</span>
+			</span>
+			<p class="title">{{post.job_title}}</p>
+			<p class="info">{{post.job_description}}</p>
+			<ul class="features">
+				<li>
+					<span class="icon">
+						<svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0h24v24H0z" fill="none"></path>
+							<path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+						</svg>
+					</span>
+					<span><strong>{{post.location}}</strong> </span>
+				</li>
+				<li>
+					<span class="icon">
+						<svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0h24v24H0z" fill="none"></path>
+							<path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+						</svg>
+					</span>
+					<span>{{post.time}} /<strong>{{post.date}}</strong></span>
+				</li>
+				<li>
+					<span class="icon">
+						<svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0h24v24H0z" fill="none"></path>
+							<path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+						</svg>
+					</span>
+					<span>{{post.address}}</span>
+				</li>
+			</ul>
+			<div class="action">
+			<a class="button" href="/notify/{{post.post_id}}">
+				Send Request
+			</a>
+			</div>
+               
+		</div>
+    
+	</div>
+  <div class="post_img">
+    <img src="/media/{{post.photo}}">
+  </div> 
+    </div>    
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-3 wow" data-wow-delay="0.1s" style="margin-top: 6rem;">
+        
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">workhouse</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">IT Team workhouse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
